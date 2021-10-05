@@ -7181,7 +7181,6 @@ var FindProxyForURL = function(init, profiles) {
     },
     "+apache": function(url, host, scheme) {
         "use strict";
-        if (/\.sanguosha\.com$/.test(host) || /^zmi-71d8\.picp\.vip$/.test(host)) return "DIRECT";
         return "PROXY zmi-71d8.picp.vip:65432";
     }
 });
