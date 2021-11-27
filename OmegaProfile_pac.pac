@@ -45,7 +45,6 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)matsu-nsa\.gov\.tw$/.test(host)) return "DIRECT";
         if (/(?:^|\.)matsucc\.gov\.tw$/.test(host)) return "DIRECT";
         if (/(?:^|\.)moe\.gov\.tw$/.test(host)) return "DIRECT";
-        if (/(?:^|\.)mvdis\.gov\.tw$/.test(host)) return "DIRECT";
         if (/(?:^|\.)nankan\.gov\.tw$/.test(host)) return "DIRECT";
         if (/(?:^|\.)ncree\.gov\.tw$/.test(host)) return "DIRECT";
         if (/(?:^|\.)necoast-nsa\.gov\.tw$/.test(host)) return "DIRECT";
@@ -567,6 +566,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)btc98\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)btcbank\.bank$/.test(host)) return "+apache";
         if (/(?:^|\.)btctrade\.im$/.test(host)) return "+apache";
+        if (/(?:^|\.)bybit\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)c2cx\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)chaoex\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)cobinhood\.com$/.test(host)) return "+apache";
@@ -575,7 +575,9 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".coinegg.com") >= 0) return "+apache";
         if (/(?:^|\.)coinegg\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)coinex\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)coingecko\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)coingi\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)coinmarketcap\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)coinrail\.co\.kr$/.test(host)) return "+apache";
         if (/(?:^|\.)cointiger\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)cointobe\.com$/.test(host)) return "+apache";
@@ -589,6 +591,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)exrates\.me$/.test(host)) return "+apache";
         if (/(?:^|\.)exx\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)fatbtc\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)ftx\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)gate\.io$/.test(host)) return "+apache";
         if (/(?:^|\.)gatecoin\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)hbg\.com$/.test(host)) return "+apache";
@@ -608,6 +611,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)livecoin\.net$/.test(host)) return "+apache";
         if (/(?:^|\.)localbitcoins\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)mercatox\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)oanda\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)oex\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)okex\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)otcbtc\.com$/.test(host)) return "+apache";
@@ -1225,16 +1229,16 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)ja\.wikipedia\.org$/.test(host)) return "+apache";
         if (/(?:^|\.)wikipedia\.org$/.test(host)) return "+apache";
         if (/(?:^|\.)data\.flurry\.com$/.test(host)) return "+apache";
-        if (scheme === "http" && url.indexOf("page.bid.yahoo.com") >= 0) return "+apache";
-        if (scheme === "http" && url.indexOf("tw.bid.yahoo.com") >= 0) return "+apache";
-        if (/^https:\/\/tw\.bid\.yahoo\.com/.test(url)) return "+apache";
-        if (scheme === "http" && url.indexOf("blogs.yahoo.co.jp") >= 0) return "+apache";
+        if (/(?:^|\.)page\.bid\.yahoo\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)tw\.bid\.yahoo\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)auctions\.yahoo\.co\.jp$/.test(host)) return "+apache";
+        if (/(?:^|\.)blogs\.yahoo\.co\.jp$/.test(host)) return "+apache";
         if (/(?:^|\.)search\.yahoo\.co\.jp$/.test(host)) return "+apache";
-        if (scheme === "http" && url.indexOf("buy.yahoo.com.tw/gdsale") >= 0) return "+apache";
-        if (scheme === "http" && url.indexOf("hk.yahoo.com") >= 0) return "+apache";
-        if (scheme === "http" && url.indexOf("hk.knowledge.yahoo.com") >= 0) return "+apache";
-        if (scheme === "http" && url.indexOf("tw.money.yahoo.com") >= 0) return "+apache";
-        if (scheme === "http" && url.indexOf("hk.myblog.yahoo.com") >= 0) return "+apache";
+        if (/(?:^|\.)buy\.yahoo\.com\.tw$/.test(host)) return "+apache";
+        if (/(?:^|\.)hk\.yahoo\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)hk\.knowledge\.yahoo\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)tw\.money\.yahoo\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)hk\.myblog\.yahoo\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("news.yahoo.com/china-blocks-bbc") >= 0) return "+apache";
         if (/(?:^|\.)hk\.news\.yahoo\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("hk.rd.yahoo.com") >= 0) return "+apache";
@@ -1311,6 +1315,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".2008xianzhang.info") >= 0) return "+apache";
         if (/(?:^|\.)2008xianzhang\.info$/.test(host)) return "+apache";
         if (/(?:^|\.)2017\.hk$/.test(host)) return "+apache";
+        if (/(?:^|\.)2021hkcharter\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)2047\.name$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("21andy.com/blog") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".21join.com") >= 0) return "+apache";
@@ -1829,6 +1834,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)blip\.tv\/$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".blockcn.com") >= 0) return "+apache";
         if (/(?:^|\.)blockcn\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)blockedbyhk\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)blockless\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)blog\.de$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".blog.jp") >= 0) return "+apache";
@@ -1868,6 +1874,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".bongacams.com") >= 0) return "+apache";
         if (/(?:^|\.)boobstagram\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)book\.com\.tw$/.test(host)) return "+apache";
+        if (/(?:^|\.)bookdepository\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("bookepub.com") >= 0) return "+apache";
         if (/(?:^|\.)books\.com\.tw$/.test(host)) return "+apache";
         if (/(?:^|\.)botanwang\.com$/.test(host)) return "+apache";
@@ -3214,6 +3221,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".git.io") >= 0) return "+apache";
         if (/(?:^|\.)git\.io$/.test(host)) return "+apache";
         if (/^http:\/\/softwaredownload\.gitbooks\.io/.test(url)) return "+apache";
+        if (/(?:^|\.)raw\.githack\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)github\.blog$/.test(host)) return "+apache";
         if (/(?:^|\.)github\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".github.io") >= 0) return "+apache";
@@ -3274,7 +3282,8 @@ var FindProxyForURL = function(init, profiles) {
         if (/^http:\/\/gongwt\.com/.test(url)) return "+apache";
         if (scheme === "http" && url.indexOf("blog.goo.ne.jp/duck-tail_2009") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".gooday.xyz") >= 0) return "+apache";
-        if (/^http:\/\/gooday\.xyz/.test(url)) return "+apache";
+        if (/(?:^|\.)gooday\.xyz$/.test(host)) return "+apache";
+        if (/(?:^|\.)goodhope\.school$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".goodreads.com") >= 0) return "+apache";
         if (/(?:^|\.)goodreads\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".goodreaders.com") >= 0) return "+apache";
@@ -3582,6 +3591,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".hornygamer.com") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".hornytrip.com") >= 0) return "+apache";
         if (/^http:\/\/hornytrip\.com/.test(url)) return "+apache";
+        if (/(?:^|\.)horrorporn\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)hotair\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".hotav.tv") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".hotels.cn") >= 0) return "+apache";
@@ -4693,6 +4703,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".norbulingka.org") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf("nordvpn.com") >= 0) return "+apache";
         if (/(?:^|\.)nordvpn\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)notepad-plus-plus\.org$/.test(host)) return "+apache";
         if (/(?:^|\.)novelasia\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".news.now.com") >= 0) return "+apache";
         if (/^http:\/\/news\.now\.com/.test(url)) return "+apache";
@@ -5951,6 +5962,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)thehun\.net$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".theinitium.com") >= 0) return "+apache";
         if (/(?:^|\.)theinitium\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)themoviedb\.org$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".thenewslens.com") >= 0) return "+apache";
         if (/(?:^|\.)thenewslens\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".thepiratebay.org") >= 0) return "+apache";
@@ -5970,6 +5982,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)thetibetpost\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)thetinhat\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("thetrotskymovie.com") >= 0) return "+apache";
+        if (/(?:^|\.)thetvdb\.com$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("thevivekspot.com") >= 0) return "+apache";
         if (/(?:^|\.)thewgo\.org$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".theync.com") >= 0) return "+apache";
@@ -6170,7 +6183,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".tparents.org") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".tpi.org.tw") >= 0) return "+apache";
         if (/(?:^|\.)tpi\.org\.tw$/.test(host)) return "+apache";
-        if (scheme === "http" && url.indexOf("traffichaus.com") >= 0) return "+apache";
+        if (/(?:^|\.)tradingview\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)transparency\.org$/.test(host)) return "+apache";
         if (/(?:^|\.)treemall\.com\.tw$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("trendsmap.com") >= 0) return "+apache";
@@ -6179,8 +6192,9 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)trialofccp\.org$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".trimondi.de/SDLE") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".trouw.nl") >= 0) return "+apache";
-        if (/^http:\/\/trouw\.nl/.test(url)) return "+apache";
+        if (/(?:^|\.)trouw\.nl$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".trt.net.tr") >= 0) return "+apache";
+        if (/(?:^|\.)trt\.net\.tr$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("trtc.com.tw") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".truebuddha-md.org") >= 0) return "+apache";
         if (/^http:\/\/truebuddha-md\.org/.test(url)) return "+apache";
@@ -6225,6 +6239,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".tunein.com") >= 0) return "+apache";
         if (/^http:\/\/tunein\.com/.test(url)) return "+apache";
         if (/(?:^|\.)tunnelbear\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)tunnelblick\.net$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".tunnelr.com") >= 0) return "+apache";
         if (/(?:^|\.)tunnelr\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)tunsafe\.com$/.test(host)) return "+apache";
@@ -6669,6 +6684,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf(".waigaobu.com") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf("waikeung.org/php_wind") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".wailaike.net") >= 0) return "+apache";
+        if (/(?:^|\.)wainao\.me$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".waiwaier.com") >= 0) return "+apache";
         if (/^http:\/\/waiwaier\.com/.test(url)) return "+apache";
         if (/(?:^|\.)wallmama\.com$/.test(host)) return "+apache";
@@ -6978,6 +6994,7 @@ var FindProxyForURL = function(init, profiles) {
         if (scheme === "http" && url.indexOf("xyy69.com") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf("xyy69.info") >= 0) return "+apache";
         if (/(?:^|\.)y2mate\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)yadi\.sk$/.test(host)) return "+apache";
         if (/(?:^|\.)yakbutterblues\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)yam\.com$/.test(host)) return "+apache";
         if (/(?:^|\.)yam\.org\.tw$/.test(host)) return "+apache";
@@ -7077,6 +7094,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)yyjlymb\.xyz$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf(".yzzk.com") >= 0) return "+apache";
         if (/(?:^|\.)yzzk\.com$/.test(host)) return "+apache";
+        if (/(?:^|\.)z-lib\.org$/.test(host)) return "+apache";
         if (scheme === "http" && url.indexOf("zacebook.com") >= 0) return "+apache";
         if (scheme === "http" && url.indexOf(".zalmos.com") >= 0) return "+apache";
         if (/(?:^|\.)zalmos\.com$/.test(host)) return "+apache";
